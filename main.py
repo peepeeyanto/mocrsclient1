@@ -30,7 +30,7 @@ def main():
 
         # Send request to REST API
         url = 'http://127.0.0.1:5000/ml'
-        files = {'file': open('screenshot.png', 'rb')}
+        files = {'file': ("screenshot.jpg", open('screenshot.jpg', 'rb'), "image/jpg")}
         headers1 = {"authorization": token}
         response = requests.post(url, files=files, headers=headers1)
 
